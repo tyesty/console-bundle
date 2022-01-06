@@ -1,6 +1,6 @@
 {
-    "name": "huttopia/console-bundle",
-    "description": "Add some nice features to symfony/console",
+    "name": "tyesty/console-bundle",
+    "description": "Add some nice features to symfony/console - this is a fork of huttopia/console-bundle",
     "license": "MIT",
     "type": "library",
     "autoload": {
