@@ -164,7 +164,7 @@ class TextDescriptor extends SymfonyTextDescriptor
 
             foreach ($namespace['commands'] as $name) {
                 $this->writeLn();
-                $spacingWidth = $width - Helper::strlen($name);
+                $spacingWidth = $width - Helper::width($name);
                 $command = $commands[$name];
                 $commandAliases = $name === $command->getName() ? $this->getCommandAliasesText($command) : '';
 
@@ -205,12 +205,12 @@ class TextDescriptor extends SymfonyTextDescriptor
 
         foreach ($commands as $command) {
             if ($command instanceof Command) {
-                $widths[] = Helper::strlen($command->getName());
+                $widths[] = Helper::width($command->getName());
                 foreach ($command->getAliases() as $alias) {
-                    $widths[] = Helper::strlen($alias);
+                    $widths[] = Helper::width($alias);
                 }
             } else {
-                $widths[] = Helper::strlen($command);
+                $widths[] = Helper::width($command);
             }
         }
 
